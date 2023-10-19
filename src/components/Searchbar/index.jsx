@@ -8,7 +8,7 @@ const Searchbar = () => {
         <input type="text" />
       </div>
       <div>
-        <button>Buscar</button>
+        <button className='search-btn'></button>
       </div>
     </div>
   )
