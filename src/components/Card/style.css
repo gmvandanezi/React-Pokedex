@@ -16,6 +16,7 @@
     box-shadow: 10px 10px 21px 5px #000000;
     backdrop-filter: blur(13.5px);
     -webkit-backdrop-filter: blur(13.5px);
+    transition: .3s;
 }
 
 .card h5{
@@ -32,6 +33,7 @@
 
 .card:hover{
     cursor: pointer;
+    transform: scale(1.03);
 }
 
 .pokemon-img{
