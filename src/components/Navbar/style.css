@@ -18,7 +18,12 @@
 }
 
 .navbar-logo img {
-    max-width: 80px;
+    max-width: 70px;
+    transition: .3s;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.1);
 }
 
 .navbar-menu ul {
@@ -30,6 +35,10 @@
 
 .navbar-menu li {
     list-style: none;
+}
+
+.menu-item {
+    text-decoration: none;
     font-size: 16px;
     text-shadow: 0.1em 0.1em 0.1em black;
     font-weight: 700;
@@ -38,7 +47,7 @@
     transition: .3s;
 }
 
-.navbar-menu li:hover {
+.menu-item:hover {
     font-size: 16.4px;
     color: tomato;
     transition: .3s;
