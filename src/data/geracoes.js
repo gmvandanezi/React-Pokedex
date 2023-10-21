@@ -42,7 +42,7 @@ const geracoes = [
     {
       nome: "Geração 9",
       start: 906,
-      end: 1500
+      end: 1292
     }
   ];
   export default geracoes;
