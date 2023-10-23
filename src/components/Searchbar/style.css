@@ -7,20 +7,44 @@
     gap: 1rem;
 }
 
-.search input{
-    width: 500px;
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    width: 350px;
     height: 3rem;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 1);
     backdrop-filter: blur(13.5px);
     -webkit-backdrop-filter: blur(13.5px);
-    border-radius: 3rem;
+    border-radius: 3rem 0 0 3rem;
     border: none;
     transition: .3s;
 }
 
-.search-btn{
+.search select {
+    width: 125px;
+    height: 3rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 1);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 0 3rem 3rem 0;
+    border: none;
+    transition: .3s;
+}
+
+.opt-generation {
+    color: tomato;
+    text-shadow: 2px 2px 3px #000000;
+    text-align: left;
+}
+
+.search-btn {
     width: 64px;
     height: 64px;
     background-image: url("../../assets/pokeball.png");
@@ -30,18 +54,27 @@
     transition: .3s;
 }
 
-.search-btn:hover{
+.search-btn:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.search input:focus{
+.search input:focus {
     outline: none;
 }
 
-@media(max-width: 640px){
-    .search input{
-        width: 210px;
-        height: 40px;
+.search select:focus {
+    outline: none;
+}
+
+@media(max-width: 640px) {
+    .search input {
+        width: 105px;
+        height: 50px;
     }
-   }
+
+    .search select {
+        width: 125px;
+        height: 50px;
+    }
+}

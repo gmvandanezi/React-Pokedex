@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: .4rem;
     overflow: hidden;
 
@@ -16,28 +17,43 @@
     box-shadow: 10px 10px 21px 5px #000000;
     backdrop-filter: blur(13.5px);
     -webkit-backdrop-filter: blur(13.5px);
-    transition: .3s;
 }
 
-.card h5{
+.card-h{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: .5rem;
+}
+
+.card h6{
     color: tomato;
     text-shadow: 2px 2px 3px #000000;
     text-align: left;
 }
 
-.card h3{
+.card h5{
     color: tomato;
     text-transform: uppercase;
     text-shadow: 2px 2px 3px #000000;
 }
 
-.card:hover{
-    cursor: pointer;
-    transform: scale(1.03);
+.pokemon-img{
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 180px;
 }
 
-.pokemon-img{
-    width: 160px;
+.pokemon-img img{
+    height: 90%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.pokemon-img img:hover{
+    transform: scale(1.1);
 }
 
 .pokemon-types {

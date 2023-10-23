@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 const Card = (props) => {
@@ -25,9 +26,11 @@ const Card = (props) => {
 
     return (
         <div className='card'>
-            <h5>#{pokemon.id}</h5>
-            <h3>{pokemon.name}</h3>
-            <img className="pokemon-img" src={imgPokemon} alt="pokemon" />
+            <div className='card-h'>
+                <h6>#{pokemon.id}</h6>
+                <h5>{pokemon.name}</h5>
+            </div>
+            <Link to='' className="pokemon-img"><img src={imgPokemon} alt="pokemon" /></Link>
             <div className='pokemon-types' key={pokemon.id}>
                 {
                     pokeTypes.map((param, index) => (

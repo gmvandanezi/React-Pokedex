@@ -7,10 +7,10 @@ const Searchbar = ({ selectedGen }) => {
     <div className='search-pokemon'>
       <div className='search'>
         <input type="text" />
-        <select name="generation" id="generation" onChange={(e) => { console.log(selectedGen(e.target.value)) }}>
+        <select name="generation" id="generation" onChange={(e) => { selectedGen(e.target.value) }}>
           {
             geracoes.map((geracao, index) => (
-              <option key={index} value={geracao.nome}>{geracao.nome}</option>
+              <option className={`opt-generation`} key={index} value={geracao.nome}>{geracao.nome}</option>
             ))
           }
         </select>

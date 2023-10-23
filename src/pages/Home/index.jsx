@@ -9,6 +9,7 @@ const Home = () => {
 
     const [pokemons, setPokemons] = useState([]);
     const [geracao, setGeracao] = useState({});
+    
 
     const selectedGen = (value) => {
         const geracaoAtual = geracoes.find((g) => g.nome == value);
@@ -17,9 +18,8 @@ const Home = () => {
 
     const getAllPokemonsByGen = async (generation) => {
         try {
-            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${generation.start}&limit=${generation[0] ? 151 : generation.end - generation.start}`);
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${generation.start}&limit=${generation.end - generation.start}`);
             setPokemons(response.data.results);
-            console.log(response.data.results.length)
         } catch (error) {
             console.log(error);
         }
