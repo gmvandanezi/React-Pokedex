@@ -30,7 +30,7 @@ const Card = (props) => {
                 <h6>#{pokemon.id}</h6>
                 <h5>{pokemon.name}</h5>
             </div>
-            <Link to='' className="pokemon-img"><img src={imgPokemon} alt="pokemon" /></Link>
+            <Link to={`/details/${pokemon.id}`} className="pokemon-img"><img src={imgPokemon} alt="pokemon" /></Link>
             <div className='pokemon-types' key={pokemon.id}>
                 {
                     pokeTypes.map((param, index) => (
