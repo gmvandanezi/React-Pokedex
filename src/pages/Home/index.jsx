@@ -8,8 +8,7 @@ import geracoes from '../../data/geracoes'
 const Home = () => {
 
     const [pokemons, setPokemons] = useState([]);
-    const [geracao, setGeracao] = useState({});
-    
+    const [geracao, setGeracao] = useState(geracoes[0]);
 
     const selectedGen = (value) => {
         const geracaoAtual = geracoes.find((g) => g.nome == value);

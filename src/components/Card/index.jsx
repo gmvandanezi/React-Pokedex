@@ -8,13 +8,14 @@ const Card = (props) => {
 
     const [pokemon, setPokemon] = useState({});
     const [pokeTypes, setPokeTypes] = useState([]);
-    const imgPokemon = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
+    // console.log("🚀 ~ file: index.jsx:11 ~ Card ~ pokeTypes:", pokeTypes)
+    const imgPokemon = pokemon?.id ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon?.id}.png` : "";
 
     const getPokemon = async (name) => {
         try {
             const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}/`);
             setPokemon(response.data);
-            setPokeTypes(response.data.types)
+            setPokeTypes(response.data.types);
         } catch (error) {
             console.log(error);
         }
@@ -35,8 +36,8 @@ const Card = (props) => {
                 {
                     pokeTypes.map((param, index) => (
                         <div className='pokemon-type' key={index}>
-                            <img src={`../src/assets/pokemon-types/${param.type.name}.png`} alt="type-pokemon" />
-                            <span key={index}>{param.type.name}</span>
+                            {param?.type?.name && <img src={`../src/assets/pokemon-types/${param?.type?.name}.png`} alt="type-pokemon" />}
+                            {param?.type?.name && <span key={index}>{param.type.name}</span>}
                         </div>
                     ))
                 }

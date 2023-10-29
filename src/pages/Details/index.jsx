@@ -14,7 +14,7 @@ const Details = () => {
     try {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`);
       setPokemon(response.data);
-      setPokeTypes(response.data.types)
+      setPokeTypes(response.data.types);
     } catch (error) {
       console.log(error);
     }
