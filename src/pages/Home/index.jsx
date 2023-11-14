@@ -15,6 +15,17 @@ const Home = () => {
         setGeracao(geracaoAtual);
     }
 
+    const filterPokemon = async (value) => {
+        try {
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=1010`);
+            const allPokemons = response.data.results;
+            const findPokemons = allPokemons.filter((p) => p.name.toLowerCase().includes(value.toLowerCase()));
+            setPokemons(findPokemons);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     const getAllPokemonsByGen = async (generation) => {
         try {
             const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${generation.start}&limit=${generation.end - generation.start}`);
@@ -32,7 +43,7 @@ const Home = () => {
         <div className='home-search'>
             <div className='container-search'>
                 <div className='header-search'>
-                    <Searchbar selectedGen={selectedGen} />
+                    <Searchbar selectedGen={selectedGen} filterPokemon={filterPokemon} />
                 </div>
             </div>
             <div className='container-cards'>

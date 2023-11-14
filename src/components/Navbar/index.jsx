@@ -1,16 +1,15 @@
 import React from 'react'
 import './style.css'
 import { Link } from 'react-router-dom';
+import logo from '../../assets/pokemon-logo.png'
 
 const Navbar = () => {
-
-  const pokemon_logo = "../../src/assets/pokemon-logo.png";
 
   return (
     <div className='nav-container'>
       <nav className='navbar'>
         <div className='navbar-logo'>
-          <Link to={'/'}><img src={pokemon_logo} alt="pokemon-logo" /></Link>
+          <Link to={'/'}><img src={logo} alt="pokemon-logo" /></Link>
         </div>
         <div className='navbar-menu'>
           <ul>
