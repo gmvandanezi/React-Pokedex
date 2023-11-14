@@ -2,7 +2,7 @@ import './style.css'
 import geracoes from '../../data/geracoes.js'
 import { useState } from 'react'
 
-const Searchbar = ({ selectedGen, filterPokemon }) => {
+const Searchbar = ({ selectedGen }) => {
 
   const [busca, setBusca] = useState("");
 
@@ -19,7 +19,7 @@ const Searchbar = ({ selectedGen, filterPokemon }) => {
         </select>
       </div>
       <div>
-        <button className='search-btn' onClick={filterPokemon(busca)}></button>
+        <button className='search-btn'></button>
       </div>
     </div>
   )

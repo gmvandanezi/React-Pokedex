@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import './style.css'
+import React, { useEffect, useState } from 'react';
+import './style.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import bug from '../../assets/pokemon-types/bug.png';
@@ -20,7 +20,6 @@ import psychic from '../../assets/pokemon-types/psychic.png';
 import rock from '../../assets/pokemon-types/rock.png';
 import steel from '../../assets/pokemon-types/steel.png';
 import water from '../../assets/pokemon-types/water.png';
-
 
 const Card = (props) => {
 
@@ -53,8 +52,26 @@ const Card = (props) => {
                 {
                     pokeTypes.map((param, index) => (
                         <div className='pokemon-type' key={index}>
-                            {param?.type?.name && <img src={param?.type?.name} alt="type-pokemon" />}
-                            {param?.type?.name && <span key={index}>{param.type.name}</span>}
+                            {param?.type?.name && <img src={
+                                param?.type?.name === 'bug' ? bug :
+                                    param?.type?.name === 'dark' ? dark :
+                                        param?.type?.name === 'dragon' ? dragon :
+                                            param?.type?.name === 'electric' ? electric :
+                                                param?.type?.name === 'fairy' ? fairy :
+                                                    param?.type?.name === 'fighting' ? fighting :
+                                                        param?.type?.name === 'fire' ? fire :
+                                                            param?.type?.name === 'flying' ? flying :
+                                                                param?.type?.name === 'ghost' ? ghost :
+                                                                    param?.type?.name === 'grass' ? grass :
+                                                                        param?.type?.name === 'ground' ? ground :
+                                                                            param?.type?.name === 'ice' ? ice :
+                                                                                param?.type?.name === 'normal' ? normal :
+                                                                                    param?.type?.name === 'poison' ? poison :
+                                                                                        param?.type?.name === 'psychic' ? psychic :
+                                                                                            param?.type?.name === 'rock' ? rock :
+                                                                                                param?.type?.name === 'steel' ? steel : water
+                            } alt='tipo' />}
+                            {param?.type?.name && <span key={index}>{param?.type?.name}</span>}
                         </div>
                     ))
                 }
