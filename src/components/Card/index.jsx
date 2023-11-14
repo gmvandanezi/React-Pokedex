@@ -2,24 +2,24 @@ import React, { useEffect, useState } from 'react'
 import './style.css'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../../assets/pokemon-types/bug.png';
-import '../../assets/pokemon-types/dark.png';
-import '../../assets/pokemon-types/dragon.png';
-import '../../assets/pokemon-types/electric.png';
-import '../../assets/pokemon-types/fairy.png';
-import '../../assets/pokemon-types/fighting.png';
-import '../../assets/pokemon-types/fire.png';
-import '../../assets/pokemon-types/flying.png';
-import '../../assets/pokemon-types/ghost.png';
-import '../../assets/pokemon-types/grass.png';
-import '../../assets/pokemon-types/ground.png';
-import '../../assets/pokemon-types/ice.png';
-import '../../assets/pokemon-types/normal.png';
-import '../../assets/pokemon-types/poison.png';
-import '../../assets/pokemon-types/psychic.png';
-import '../../assets/pokemon-types/rock.png';
-import '../../assets/pokemon-types/steel.png';
-import '../../assets/pokemon-types/water.png';
+import bug from '../../assets/pokemon-types/bug.png';
+import dark from '../../assets/pokemon-types/dark.png';
+import dragon from '../../assets/pokemon-types/dragon.png';
+import electric from '../../assets/pokemon-types/electric.png';
+import fairy from '../../assets/pokemon-types/fairy.png';
+import fighting from '../../assets/pokemon-types/fighting.png';
+import fire from '../../assets/pokemon-types/fire.png';
+import flying from '../../assets/pokemon-types/flying.png';
+import ghost from '../../assets/pokemon-types/ghost.png';
+import grass from '../../assets/pokemon-types/grass.png';
+import ground from '../../assets/pokemon-types/ground.png';
+import ice from '../../assets/pokemon-types/ice.png';
+import normal from '../../assets/pokemon-types/normal.png';
+import poison from '../../assets/pokemon-types/poison.png';
+import psychic from '../../assets/pokemon-types/psychic.png';
+import rock from '../../assets/pokemon-types/rock.png';
+import steel from '../../assets/pokemon-types/steel.png';
+import water from '../../assets/pokemon-types/water.png';
 
 
 const Card = (props) => {
@@ -53,7 +53,7 @@ const Card = (props) => {
                 {
                     pokeTypes.map((param, index) => (
                         <div className='pokemon-type' key={index}>
-                            {param?.type?.name && <img src={`../src/assets/pokemon-types/${param?.type?.name}.png`} alt="type-pokemon" />}
+                            {param?.type?.name && <img src={param?.type?.name} alt="type-pokemon" />}
                             {param?.type?.name && <span key={index}>{param.type.name}</span>}
                         </div>
                     ))
