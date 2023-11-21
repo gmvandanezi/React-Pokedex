@@ -1,7 +1,7 @@
 .info-pokemon {
     overflow-y: auto;
     max-width: 95vw;
-    height: 85vh;
+    height: 80vh;
     margin: 0 auto 1.2rem auto;
     background: rgba(255, 255, 255, 0.03);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -46,7 +46,7 @@
     color: tomato;
     text-transform: capitalize;
     text-shadow: 2px 2px 3px #000000;
-    font-size: 48px;
+    font-size: 36px;
 }
 
 .details img {
